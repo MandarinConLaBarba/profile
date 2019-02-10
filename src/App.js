@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import AnimatedSquare from './components/AnimatedSquare'
 import styled from 'styled-components'
+
+import AnimatedSquare from './components/AnimatedSquare'
+import IntroText from './components/IntroText'
+
 
 const MandarinImage = styled.img`
   width: 100%;
@@ -55,8 +58,8 @@ const bgColors = [
 
 const initIntroTextItems = [
   "Hello! Hola!",
-  "Thank you for visiting! Bienvenidos!",
-  "Every day is a great day!",
+  "Bienvenidos!",
+  "Today is a great day!",
   "Están de acuerdo?"
 ]
 
@@ -72,6 +75,7 @@ class App extends Component {
     this.state = {
       clickedItems: [],
       textForSquares: [],
+      textForLeftSide: [],
       introTextItems:  Object.assign([], initIntroTextItems)
     }
 
@@ -85,7 +89,11 @@ class App extends Component {
 
   render() {
 
-    const { clickedItems, textForSquares } = this.state;
+    const {
+      clickedItems,
+      textForSquares,
+      textForLeftSide
+     } = this.state;
 
     const squareNodes = anims.map((anim, i) => (
       <AnimatedSquare
@@ -102,6 +110,9 @@ class App extends Component {
 
     return (
       <div>
+        <IntroText>
+          {textForLeftSide}
+        </IntroText>
         <OuterWrapper onClick={this._clearClicks}>
           <MandarinWrapper>
             <MandarinImage src="cell_mandarin.png" />
@@ -124,27 +135,39 @@ class App extends Component {
     this.setState({
       clickedItems: {},
       textForSquares: [],
-      introTextItems: Object.assign([], initIntroTextItems)})
+      textForLeftSide: [],
+      introTextItems: Object.assign([], initIntroTextItems)
+    })
   }
 
   _handleClick(indx, e) {
 
-    const { clickedItems, textForSquares, introTextItems } = this.state;
+    const {
+      clickedItems,
+      textForSquares,
+      introTextItems,
+      textForLeftSide
+     } = this.state;
 
     e.stopPropagation();
 
     clickedItems[indx] = clickedItems[indx] ? false : true;
 
     if (textForSquares[indx]) {
-      introTextItems.unshift(textForSquares[indx]);
-      textForSquares[indx] = "";
+      //introTextItems.unshift(textForSquares[indx]);
+      //textForSquares[indx] = "";
     } else {
       textForSquares[indx] = introTextItems.shift();
+      if (textForLeftSide.length < initIntroTextItems.length) {
+        textForLeftSide.push(textForSquares[indx]);
+      }
+
     }
 
     this.setState({
       clickedItems,
-      textForSquares
+      textForSquares,
+      textForLeftSide
     })
 
   }

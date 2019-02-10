@@ -9,8 +9,13 @@ const Wrapper = styled.div`
   border-bottom-right-radius: ${props => props.position === 3 ? "10px" : "0"};
   flex: 1;
   text-align: center;
-  height: 200px;
-  width: 200px;
+  height: 10vw;
+  width: 10vw;
+  @media only screen and (max-width: 600px) {
+    height: 30vw;
+    width: 30vw;
+    font-size: 0;
+  }
   color: #${props => props.color};
   background-color: #${props => props.bgColor};
   color: #${props => props.color};

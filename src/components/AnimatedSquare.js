@@ -49,7 +49,6 @@ const leave = keyframes`
     animation-duration .${random}s;
     animation-name ${props => props.clicked ? enter : leave};
     `;
-
  }
 
 const TextWrapper = styled.div`
@@ -58,7 +57,10 @@ const TextWrapper = styled.div`
   align-items: center;
   flex-direction: row;
   height: 100%;
-  font-size: 20px;
+  font-size: 0vh;
+  @media only screen and (max-width: 600px) {
+    font-size: 3vh;
+  }
 `;
 
 /**
