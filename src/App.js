@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import AnimatedSquare from './components/AnimatedSquare'
 import IntroText from './components/IntroText'
+import { Orangey, DarkSky } from './ColorPalettes'
 
 
 const MandarinImage = styled.img`
@@ -42,19 +43,9 @@ const anims = [
   {top: "11", left: "12", rotate: "-11"}
 ]
 
-const colors = [
-  "dfe2e2",
-  "dfe2e2",
-  "738598",
-  "dfe2e2",
-]
+const palette = Orangey;
+//const palette = DarkSky;
 
-const bgColors = [
-  "3c415e",
-  "738598",
-  "dfe2e2",
-  "1cb3c8"
-]
 
 const initIntroTextItems = [
   "Hello! Hola!",
@@ -99,8 +90,8 @@ class App extends Component {
       <AnimatedSquare
         key={`anim-square-${i}`}
         indx={i}
-        color={colors[i]}
-        bgColor={bgColors[i]}
+        color={palette.colors[i]}
+        bgColor={palette.bgColors[i]}
         anim={anims[i]}
         onClick={this[`_handleClick${i}`]}
         clicked={clickedItems[i]}>

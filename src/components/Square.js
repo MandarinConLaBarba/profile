@@ -14,7 +14,6 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 600px) {
     height: 30vw;
     width: 30vw;
-    font-size: 0;
   }
   color: #${props => props.color};
   background-color: #${props => props.bgColor};
