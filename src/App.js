@@ -33,10 +33,10 @@ const InnerWrapper = styled.div`
 `;
 
 const anims = [
-  {top: "-200", left: "-260", rotate: "-10"},
-  {top: "-250", left: "260", rotate: "10"},
-  {top: "250", left: "-260", rotate: "10"},
-  {top: "250", left: "260", rotate: "-10"}
+  {top: "-10", left: "-10", rotate: "-13"},
+  {top: "-9", left: "10", rotate: "8"},
+  {top: "11", left: "-8", rotate: "12"},
+  {top: "11", left: "12", rotate: "-11"}
 ]
 
 const colors = [
@@ -104,7 +104,7 @@ class App extends Component {
       <div>
         <OuterWrapper onClick={this._clearClicks}>
           <MandarinWrapper>
-            <MandarinImage src="/cell_mandarin.png" />
+            <MandarinImage src="cell_mandarin.png" />
           </MandarinWrapper>
           <InnerWrapper>
             {squareNodes[0]}

@@ -7,28 +7,28 @@ const getSquareKeyframes = (top, left, rotate) => {
 
   const enter = keyframes`
   from {
-    top: 0px;
-    left: 0px;
+    top: 0vh;
+    left: 0vw;
     transform: rotate(0deg);
   }
 
   to {
-    top: ${top}px;
-    left: ${left}px
+    top: ${top}vh;
+    left: ${left}vw
     transform: rotate(${rotate}deg);
   }
 `;
 
 const leave = keyframes`
   from {
-    top: ${top}px;
-    left: ${left}px
+    top: ${top}vh;
+    left: ${left}vw
     transform: rotate(${rotate}deg);
   }
 
   to {
-    top: 0px;
-    left: 0px;
+    top: 0vh;
+    left: 0vw;
     transform: rotate(0deg);
   }
 `;
