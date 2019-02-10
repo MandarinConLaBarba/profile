@@ -44,7 +44,6 @@ const anims = [
 ]
 
 const palette = Orangey;
-//const palette = DarkSky;
 
 
 const initIntroTextItems = [

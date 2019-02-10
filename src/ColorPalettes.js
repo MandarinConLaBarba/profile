@@ -9,10 +9,10 @@ export const Orangey = {
     "5d5d5a"
   ],
   bgColors: [
-    "fff4e3",
     "ffa45c",
+    "fff4e3",
+    "5d5d5a",
     "ffcdab",
-    "5d5d5a"
   ]
 }
 
