@@ -18,6 +18,9 @@ const Wrapper = styled.div`
   color: #${props => props.color};
   background-color: #${props => props.bgColor};
   color: #${props => props.color};
+  border-color: #000;
+  border-right-width .5px;
+  boder-top-width: 1px;
 `;
 
 
