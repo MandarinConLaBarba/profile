@@ -1,7 +1,7 @@
 {
   "main.css": "/profile/static/css/main.c3ca2fc2.chunk.css",
-  "main.js": "/profile/static/js/main.f8bf346b.chunk.js",
-  "main.js.map": "/profile/static/js/main.f8bf346b.chunk.js.map",
+  "main.js": "/profile/static/js/main.d28f6ffb.chunk.js",
+  "main.js.map": "/profile/static/js/main.d28f6ffb.chunk.js.map",
   "static/js/1.592c2e07.chunk.js": "/profile/static/js/1.592c2e07.chunk.js",
   "static/js/1.592c2e07.chunk.js.map": "/profile/static/js/1.592c2e07.chunk.js.map",
   "runtime~main.js": "/profile/static/js/runtime~main.92700b96.js",
@@ -10,6 +10,6 @@
   "static/media/BikeMandarin.png": "/profile/static/media/BikeMandarin.3eec3b29.png",
   "static/media/CellMandarin.png": "/profile/static/media/CellMandarin.6c8ae083.png",
   "index.html": "/profile/index.html",
-  "precache-manifest.627de4f8bb474fac8097c136a7ed7f6a.js": "/profile/precache-manifest.627de4f8bb474fac8097c136a7ed7f6a.js",
+  "precache-manifest.0826126050d3121746509ee2502fe28d.js": "/profile/precache-manifest.0826126050d3121746509ee2502fe28d.js",
   "service-worker.js": "/profile/service-worker.js"
 }
